@@ -7,6 +7,7 @@ const searchBtn = document.getElementById("searchBtn");
 const locationElement = document.getElementById("location");
 const temperatureElement = document.getElementById("temperature");
 const descriptionElement = document.getElementById("description");
+const iconElement = document.getElementById("icon");
 const weatherCard = document.getElementById("weatherCard")
 
 searchBtn.addEventListener("click", () => {
@@ -24,6 +25,7 @@ function fetchWeather(location) {
         console.log(data);
         locationElement.textContent = `${data.name}`;
         temperatureElement.textContent =`${data.main.temp}°C`;
-        descriptionElement.textContent =`${data.weather[0].description}`;
+        descriptionElement.textContent =`${data.weather.description}`;
+        iconElement.textContent =`${data.weather.icon}`;
     });
 };
