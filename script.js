@@ -27,9 +27,7 @@ function fetchWeather(location) {
         locationElement.textContent = `Location:${data.name}`;
         temperatureElement.textContent = `Temperature: ${data.main.temp}°C`;
         humidityElement.textContent = `Humidity: ${data.main.humidity} %`;
-        descriptionElement.textContent = `Description: ${data.weather[0].description}`;
-        iconElement.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        iconElement.alt = data.weather[0].description;
+        //descriptionElement.textContent = `Description: ${data.weather[0].description}`;
     });
 };
 
